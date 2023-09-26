@@ -39,6 +39,13 @@ body::before {
     font-size: 20px;
 }
 
+/* Media query for smaller screens (e.g., phones) */
+@media (max-width: 768px) {
+    .label-left, .label-right {
+        font-size: 10px; /* Adjust the font size for smaller screens */
+    }
+}
+
 .sun {
     width: 100px;
     height: 100px;
