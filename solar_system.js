@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+        // Disable scrolling
+        document.addEventListener("scroll", function (e) {
+            e.preventDefault();
+            window.scroll(0, 0);
+        });
+
     // Update the rotation initially and then every second
     updateSunRotation();
     setInterval(updateSunRotation, 1000);
