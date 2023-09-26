@@ -48,14 +48,24 @@ body::before {
     animation: rotate 8s linear infinite;
 }
 
-.sun::after {
+/* .sun::after {
     content: "Planet X";
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg); /* Counter-rotate to cancel rotation */
-    color: black; /* Black text */
+    transform: translate(-50%, -50%) rotate(0deg); 
+    color: black;
     font-size: 12px;
+} */
+
+/* Sun text */
+.sun-text {
+    position: absolute;
+    top: 48.6%; /* Position below the sun */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text horizontally */
+    color: black;
+    font-size: 18px;
 }
 
 .planet {
