@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    margin: 0;
+}
+
+/* Centered line */
+body::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: white;
+    transform: translateX(-50%);
+    z-index: 999; /* Ensure the line is on top */
+}
+
+
+/* Label for the left half */
+.label-left {
+    position: absolute;
+    left: 10px; /* Adjust the position */
+    top: 10px; /* Adjust the position */
+    color: white;
+    font-size: 20px;
+}
+
+/* Label for the right half */
+.label-right {
+    position: absolute;
+    right: 10px; /* Adjust the position */
+    top: 10px; /* Adjust the position */
+    color: white;
+    font-size: 20px;
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 8s linear infinite;
+}
+
+.sun::after {
+    content: "Planet X";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg); /* Counter-rotate to cancel rotation */
+    color: black; /* Black text */
+    font-size: 12px;
+}
+
+.planet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.mitch {
+    background-color: #b73761;
+    animation: orbit-mitch 8s linear infinite;
+}
+
+.mitch::after {
+    content: "Mitch";
+    position: absolute;
+    top: -100%;
+    left: -20%;
+    color: white; /* Black text */
+    font-size: 12px;
+}
+
+.lauren {
+    background-color: #B4C424;
+    animation: orbit-lauren 2s linear infinite;
+}
+
+.lauren::after {
+    content: "Lauren";
+    position: absolute;
+    top: -100%;
+    left: -40%;
+    color: white; /* Black text */
+    font-size: 12px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbit-lauren {
+    0% {
+        transform: translateX(-250px);
+    }
+    100% {
+        transform: translateX(-250px);
+    }
+}
+
+@keyframes orbit-mitch {
+    0% {
+        transform: translateX(250px);
+    }
+    100% {
+        transform: translateX(250px);
+    }
+}
