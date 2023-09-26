@@ -83,7 +83,7 @@ body::before {
 /* Sun text */
 .sun-text {
     position: absolute;
-    top: 48.6%; /* Position below the sun */
+    top: 50%; /* Position below the sun */
     left: 50%;
     transform: translateX(-50%); /* Center the text horizontally */
     color: black;
