@@ -39,9 +39,29 @@ function calculateSunRotationAngle() {
     return rotationAngle;
 }
 
+// Function to update the left text based on the rotation angle
+function updateText(rotationAngle) {
+    const leftText = document.querySelector('.label-left');
+    const rightText = document.querySelector('.label-right');
+
+    if (rotationAngle > 90 && rotationAngle < 270) {
+        leftText.textContent = "Mitch loves Lauren More";
+    } else {
+        leftText.textContent = "Lauren loves Mitch More";
+    }
+
+    if (rotationAngle > 90 && rotationAngle < 270) {
+        rightText.textContent = "Lauren misses Mitch More";
+    } else {
+        rightText.textContent = "Mitch misses Lauren More";
+    }
+}
+
 // Apply the rotation angle to the sun
 function updateSunRotation() {
     const rotationAngle = calculateSunRotationAngle();
     const sun = document.querySelector('.sun');
     sun.style.transform = `rotate(${rotationAngle}deg)`;
+
+    updateText(rotationAngle);
 }
