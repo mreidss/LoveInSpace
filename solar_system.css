@@ -21,7 +21,7 @@ body::before {
     width: 1px;
     background-color: white;
     transform: translateX(-50%);
-    z-index: 999; /* Ensure the line is on top */
+    z-index: 5; /* Ensure the line is on top */
 }
 
 
@@ -32,6 +32,11 @@ body::before {
     top: 10px; /* Adjust the position */
     color: white;
     font-size: 20px;
+    max-width: 50%; /* Set a maximum width of 50% of the screen width */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflow text */
+    text-overflow: ellipsis; /* Add an ellipsis (...) for text that overflows */
+
 }
 
 /* Label for the right half */
@@ -41,6 +46,11 @@ body::before {
     top: 10px; /* Adjust the position */
     color: white;
     font-size: 20px;
+    max-width: 50%; /* Set a maximum width of 50% of the screen width */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflow text */
+    text-overflow: ellipsis; /* Add an ellipsis (...) for text that overflows */
+
 }
 
 /* Media query for smaller screens (e.g., phones) */
@@ -57,6 +67,7 @@ body::before {
     border-radius: 50%;
     position: relative;
     animation: rotate 8s linear infinite;
+    z-index: 10; /* Ensure the line is on top */
 }
 
 /* .sun::after {
@@ -77,6 +88,7 @@ body::before {
     transform: translateX(-50%); /* Center the text horizontally */
     color: black;
     font-size: 18px;
+    z-index: 15; /* Ensure the line is on top */
 }
 
 .planet {
@@ -129,18 +141,18 @@ body::before {
 
 @keyframes orbit-lauren {
     0% {
-        transform: translateX(-250px);
+        transform: translateX(-180px);
     }
     100% {
-        transform: translateX(-250px);
+        transform: translateX(-180px);
     }
 }
 
 @keyframes orbit-mitch {
     0% {
-        transform: translateX(250px);
+        transform: translateX(180px);
     }
     100% {
-        transform: translateX(250px);
+        transform: translateX(180px);
     }
 }
